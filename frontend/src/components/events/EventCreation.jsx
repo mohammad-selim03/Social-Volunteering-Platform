@@ -11,6 +11,7 @@ const EventCreation = () => {
     e.preventDefault();
 
     const eventData = { title, description, date, location, category, user_id: localStorage.getItem('user_id') };
+    console.log("userid", eventData.user_id)
 
     try {
       const response = await fetch('http://localhost:5000/events', {
